@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: cyan;
+        }
+
+        .content {
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .content p {
+            color: greenyellow;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+            opacity: 0; /* Initially, set opacity to 0 */
+            animation: fadeIn 1s forwards; /* Apply the fadeIn animation */
+        }
+
+        /* Use nth-child to apply different delays to each paragraph */
+        .content p:nth-child(1) {
+            animation-delay: 0.5s;
+        }
+
+        .content p:nth-child(2) {
+            animation-delay: 1s;
+        }
+
+        .content p:nth-child(3) {
+            animation-delay: 1.5s;
+        }
+
+        /* Add more nth-child rules for additional paragraphs */
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .content h1 {
+            animation: mymove4 0.8s;
+            animation-fill-mode: forwards;
+            animation-delay: 0ms;
+        }
+
+        @keyframes mymove4 {
+            0% {
+                right: 100%;
+            }
+            100% {
+                right: 50%;
+                transform: translateX(50%);
+            }
+        }
+        video {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        transform: translate(-50%, -50%);
+        z-index: -1; /* Place the video behind other elements */
+    }
+    .Heading{
+    color:aqua;
+    transition:  transform 1.2s ease-in-out;
+    }
+    .Heading:hover{
+color:greenyellow;
+transform:scale(1.2);
+
+    }
+    </style>
+</head>
+<body>
+    <video autoplay loop muted src="pexels-tima-miroshnichenko-5319759 (2160p).mp4"></video>
+
+    <center class="Heading">
+        <h1>About us</h1>
+    </center>
+    <div class="content">
+        <p>For over half a century, Gold's Gym has stood as a beacon of fitness excellence, transforming lives and inspiring individuals across the globe.
+        Founded in 1965 by Joe Gold in the vibrant surroundings of Venice Beach, California, Gold's Gym has evolved into a fitness empire synonymous with strength, dedication, and health.
+        Gold's Gym is not merely a workout destination; it is a legacy that has shaped the fitness landscape. From its humble beginnings, the gym has grown into an international phenomenon, attracting fitness enthusiasts from all walks of life.
+        <!-- Add more paragraphs as needed -->
+        Step into a Gold's Gym, and you enter a realm of cutting-edge fitness facilities. State-of-the-art equipment, meticulously designed workout spaces, and an atmosphere pulsating with energy define the Gold's Gym experience. It's a haven for those seeking excellence in their fitness journeys.
+            Gold's Gym caters to a diverse range of fitness preferences. Whether you're a weightlifting enthusiast, a cardio fanatic, or someone who thrives in group classes, the gym offers a comprehensive array of workouts to keep you engaged and motivated.
+             More than a gym, Gold's Gym is a community. Members share not only a commitment to fitness but also a sense of camaraderie that makes every workout an uplifting experience. Community events, challenges, and social initiatives further strengthen these bonds.
+             What started on the beaches of California has become a global phenomenon. Gold's Gym has a presence in multiple countries, transcending cultural boundaries and spreading the message of health and wellness on a worldwide scale.
+             Gold's Gym stays ahead of the fitness curve by introducing innovative programs. From the latest fitness trends to time-tested classics, members always find a variety of options to keep their workouts exciting and effective.
+            In conclusion, Gold's Gym is more than a place to work out; it's a lifestyle, a community, and a symbol of the enduring human spirit. Joining Gold's Gym means embracing a journey toward a healthier, stronger, and more vibrant life, where fitness transforms not just the body but the entire way of living.
+       
+            Step into a Gold's Gym, and you enter a realm of cutting-edge fitness facilities. State-of-the-art equipment, meticulously designed workout spaces, and an atmosphere pulsating with energy define the Gold's Gym experience. It's a haven for those seeking excellence in their fitness journeys.
+            Gold's Gym caters to a diverse range of fitness preferences. Whether you're a weightlifting enthusiast, a cardio fanatic, or someone who thrives in group classes, the gym offers a comprehensive array of workouts to keep you engaged and motivated.
+             More than a gym, Gold's Gym is a community. Members share not only a commitment to fitness but also a sense of camaraderie that makes every workout an uplifting experience. Community events, challenges, and social initiatives further strengthen these bonds.
+             What started on the beaches of California has become a global phenomenon. Gold's Gym has a presence in multiple countries, transcending cultural boundaries and spreading the message of health and wellness on a worldwide scale.
+             Gold's Gym stays ahead of the fitness curve by introducing innovative programs. From the latest fitness trends to time-tested classics, members always find a variety of options to keep their workouts exciting and effective.
+            In conclusion, Gold's Gym is more than a place to work out; it's a lifestyle, a community, and a symbol of the enduring human spirit. Joining Gold's Gym means embracing a journey toward a healthier, stronger, and more vibrant life, where fitness transforms not just the body but the entire way of living
+        </p>
+    </div>
+</body>
+</html>

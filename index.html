@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GYM WEBSITE</title>
+</head>
+<style>
+body{
+margin: 0px;
+padding: 0px;
+background:url(4.jpg);
+height: 600px;
+}
+.left{
+border: 2px solid red;
+background-color:rgb(131, 105, 73);
+position: absolute;
+display: inline-block;
+text-align: center;
+
+top:1px;
+left: 1px;
+}
+.left img{
+width: 140px;
+}
+.left div{
+    line-height: 20px;
+font-size: 25px;
+text-align: center;
+}
+.navbar li{
+display:inline-table;
+font-size: small;
+
+}
+.center{
+    /*border: 2px solid whitesmoke;*/
+    /*background-color: yellow;*/
+    display: block;
+
+width:50% ;
+margin: 5px auto;
+}
+.navbar li a{
+color:rgb(255, 111, 0);
+text-decoration: none;
+font-size: large;
+padding:25px;
+
+}
+.navbar li a:hover,.navbar li a:active{
+text-decoration: underline;
+color:greenyellow;
+}
+.right{
+    /*border: 2px solid green;*/
+    /*background-color: yellow;*/
+    display: inline-block;
+position: absolute;
+top:1px;
+right: 10px;
+
+}
+.btn{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifo;
+    margin: 20px;
+    background-color: black;
+    color: white;
+    padding: 5px 15px;
+    margin: 2px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.btn:hover{
+color: crimson;
+}
+.container{
+border: 2px solid white ;
+margin: 100px 15px;
+padding: 20px;
+width: 26%;
+border-radius: 20px;
+display: flex;
+flex-direction: column;
+
+}
+.fgroup input{
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+text-align: center;
+display: flex;
+width: 280px;
+padding: 2px;
+border: 2px solid black;
+margin: 10px auto;
+font-size: 15px;
+}
+.container h1{
+text-align: center;
+}
+.form-heading {
+    text-align: center;
+    
+    color:orange;
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-top: -550px;
+    margin-right: -500px;
+    font-weight: bold;
+    position: relative;
+    animation: mymove3 0.8s;
+    animation-fill-mode: forwards;
+    animation-delay: 0ms;
+}
+
+@keyframes mymove3 {
+    0% { left: -100%; }
+    100% { left: 75%; transform: translateX(-50%); }
+}
+.form-secondheading {
+    color:red;
+  font-weight: bold;
+  position: relative;
+    animation: mymove4 0.8s;
+    animation-fill-mode: forwards;
+    animation-delay: 0ms;
+}
+@keyframes mymove4 {
+  0% { right: -100%; }
+  100% { right: -55%; transform: translateX(-50%); }
+   } 
+   .form-heading {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: orange;
+    font-size: 20px;
+    margin-bottom: 20px;
+    
+    margin-top: -550px; /* Adjusted value */
+    margin-right: -550px;
+    font-weight: bold;
+    position: relative;
+    animation: mymove3 0.8s;
+    animation-fill-mode: forwards;
+    animation-delay: 0ms;
+}
+
+@keyframes mymove3 {
+    0% { left: -100%; }
+    100% { left: 50%; transform: translateX(-50%); }
+}
+
+.form-secondheading {
+    color: red;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    position: relative;
+    animation: mymove4 0.8s;
+    animation-fill-mode: forwards;
+    animation-delay: 0ms;
+}
+
+@keyframes mymove4 {
+    0% { right: -100%; }
+    100% { right: 50%; transform: translateX(50%); }
+}
+        
+</style>
+<body>
+
+<header>
+    <div class="left">
+<img src="5.webp" alt="" height="90px">
+<div>GOLDS GYM</div>
+    </div>
+    <div class="center">
+    <ul class="navbar">
+        <li> <a href="#">Home</a></li>
+        <li><a href="aboutus.html">About us</a></li>
+        <li><a href="packagetable.html">Fitness Package</a></li>
+        <li><a href="map.html">Location</a></li>
+      
+      
+    </ul>
+
+    </div>
+    <div class="right">
+        <button class="btn"><a href="gallery.html">Gallery</a></button>
+        <button class="btn"> <a href="tel:+91 7798661607">call</a></button>
+
+    </div>
+</header> 
+
+
+<div class="container">
+    <!--<form onsubmit="sendEmail(); reset(); return false;">-->
+    <form action="https://api.web3forms.com/submit" method="POST">
+<h1>join now!!!</h1>
+<div class="fgroup">
+    <input type="hidden" name="access_key" value="455c7a93-dd96-4fe2-ac64-41821ccae68e">
+<input type="text" name="name" id="name" placeholder="Enter your name" required>
+</div>
+<div class="fgroup">
+    <input type="text" name="age"  id="age" placeholder="Enter your Age" required>
+    </div>
+    <div class="fgroup">
+        <input type="text" name="Gender"   id="Gender" placeholder="Enter your Gender" required>
+        </div>
+        <div class="fgroup">
+            <input type="email"  name="email" id="email" placeholder="Enter your EmailID" required>
+            </div>
+            <div class="fgroup">
+                <input type="tel" name="Contact" id="Contact" placeholder="Enter your ContactNo" required>
+                </div>
+    <button class="btn">Submit</button>
+</form>
+
+</div>
+<div class="form-heading"><br><h1>Golds GYM</h1><div class="form-secondheading"><h2>Fitness in our Blood</h2></div></div>
+<br>
+<br>
+
+</div>
+</body>
+</html>
+

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin:0;
+        padding: 0;
+    }
+    .container{
+        width:80%;
+        margin:80px auto;
+    }
+    .container h1{
+        padding: 60px 0;
+        font-size: #fff;
+        text-align: center;
+    }
+    body{
+        background-color: #2e8d86;
+    }
+    .row{
+        display: flex;
+        align-items:center;
+        flex-wrap: wrap;
+    }
+    .col{
+        flex-basis: 50%;
+        min-width: 250px;
+
+    }
+    .feature-img{
+        width: 83%;
+        margin:auto;
+        position: relative;
+        border-radius: 6px;
+        overflow: hidden;
+        margin-left: -90px;
+    }
+    .small-img-col{
+        flex-basis: 50%;
+        min-width: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end; /* Align items to the right */
+        margin-right: -1800px;
+    }
+    .small-img-row{
+        display: flex;
+        background: #efefef;
+        margin: 20px 0;
+        align-items: center;
+        border-radius: 6px;
+        overflow: hidden;
+        width: 140%;
+        height: 45%;
+        justify-content: center;
+    }
+    .small-img{
+        position: relative;
+    }
+    .small-img img{
+        width:150px
+    }
+    .small-img-row p{
+        margin-left:20px;
+        color: #707070;
+        width: 250px;
+        font-size: 15px;
+    }
+    .playmedia{
+        width: 60px;
+        position: absolute;  
+        left:50%;
+        top:50%;
+        transform: translate(-50%,-50%);
+        cursor: pointer;
+    }
+    .small-img .playmedia{
+        width: 35px;
+    }
+    .video-player{
+        width: 80%;
+        position: absolute;
+        left:50%;
+        top:50%;
+        transform: translate(-50%,-50);
+        display: none;
+    }
+    video:focus{
+        outline: none;
+    }
+    .close-btn{
+        position: absolute;
+        top:10px;
+        right: 10px;
+        width:30px ;
+        cursor: pointer;
+    }
+    
+</style>
+<body>
+    <div class="container">
+        <h1>Gallery</h1>
+        <div class="row">
+            <div class="col">
+                <div class="feature-img">
+                    <img src="g4.jpeg" width="100%">
+                    <img src="pl.png" class="playmedia" onclick="playvideo('istockphoto-1482772776-640_adpp_is.mp4')">
+                </div>
+            </div>
+            <div class="small-img-col">
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="g4.jpeg" alt="">
+                        <img src="pl.png" class="playmedia" onclick="playvideo('istockphoto-1637356080-640_adpp_is.mp4')">
+                    </div>
+                    <p>HOW</p>
+                </div>
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="g4.jpeg" alt="">
+                        <img src="pl.png" class="playmedia" onclick="playvideo('135160 (1080p).mp4')">
+                    </div>
+                    <p>HOW</p>
+                </div>
+                
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="g4.jpeg" alt="">
+                        <img src="pl.png" class="playmedia" onclick="playvideo('istockphoto-1637356080-640_adpp_is.mp4')">
+                    </div>
+                    <p>HOW</p>
+                </div>
+              
+            </div>
+        </div>
+    </div>
+    <div class="video-player" id="videoplayer">
+      <video width="100%" controls autoplay id="myvideo">
+        <source src="istockphoto-1482772776-640_adpp_is.mp4" type="video/mp4">
+      </video> 
+      <img src="i1.jpeg" class="close-btn" onclick="Stopvideo()"> 
+    </div>
+    <script>
+        var videoplayer=document.getElementById("videoplayer");
+        var myvideo =document.getElementById("myvideo");
+
+        function Stopvideo(){
+            videoplayer.style.display="none";
+        }
+
+        function playvideo(file){
+            myvideo.src=file;
+            videoplayer.style.display="block";
+        }
+    </script>
+</body>
+</html>
